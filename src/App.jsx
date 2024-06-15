@@ -4,17 +4,21 @@ import ConvList from "./components/ConvList";
 import RightPanel from "./components/RightPanel";
 import TopBar from "./components/TopBar";
 import Welcome from "./components/Welcome";
-import result from "./assets/chat_response.json";
+// import result from "./chat_response.json";
 
 export default function App() {
-  const [data, setData] = useState(result.results);
-  const [chats, setChats] = useState(result.results.comments);
+  const [data, setData] = useState("");
+  // const [chats, setChats] = useState(result.results.comments);
   const [showChat, setShowChat] = useState(false);
-  // useEffect(() => {
-  //   fetch("./chat_response.json")
-  //     .then((response) => response.json())
-  //     .then((data) => setData(data.results));
-  // }, []);
+  useEffect(() => {
+    fetch("./chat_response.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data.results);
+      });
+  }, []);
+
+  const [chats, setChats] = useState([]);
   function handleReply(reply) {
     const newChats = [...chats, reply];
     setChats(newChats);

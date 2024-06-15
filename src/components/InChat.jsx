@@ -1,6 +1,6 @@
 export default function InChat({ member, sender, message }) {
   const who = member.reduce((me, m) => (m.id === sender ? m.name : me));
-  console.log(who);
+
   return (
     <div className="flex">
       <div className="relative size-10 rounded-full overflow-hidden">

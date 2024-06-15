@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function ConvList({ data, setShowChat }) {
+  if (!data || data.length === 0) return;
   const [active, setActive] = useState(false);
   const room = data.room;
   const comment = data.comments;
