@@ -36,7 +36,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/customer.jpg" alt="Image" className="w-full h-full object-cover" />
+            <img src="./customer.jpg" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
@@ -54,7 +54,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/johnny.webp" alt="Image" className="w-full h-full object-cover" />
+            <img src="./johnny.webp" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
@@ -72,7 +72,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/jason.jpg" alt="Image" className="w-full h-full object-cover" />
+            <img src="./jason.jpg" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
@@ -90,7 +90,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/angga.jpg" alt="Image" className="w-full h-full object-cover" />
+            <img src="./angga.jpg" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
@@ -108,7 +108,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/johnny.webp" alt="Image" className="w-full h-full object-cover" />
+            <img src="./johnny.webp" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
@@ -126,7 +126,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/angga.jpg" alt="Image" className="w-full h-full object-cover" />
+            <img src="./angga.jpg" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
@@ -144,7 +144,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/customer.jpg" alt="Image" className="w-full h-full object-cover" />
+            <img src="./customer.jpg" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
@@ -162,7 +162,7 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className="hover:bg-bluebtn hover:bg-opacity-10">
         <div className="grid grid-cols-6 px-6 py-3 items-center">
           <div className="relative size-14 rounded-full overflow-hidden">
-            <img src="./src/assets/jason.jpg" alt="Image" className="w-full h-full object-cover" />
+            <img src="./jason.jpg" alt="Image" className="w-full h-full object-cover" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
