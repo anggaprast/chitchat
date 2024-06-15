@@ -1,6 +1,8 @@
-export default function InChat({ member, sender, message }) {
-  const who = member.reduce((me, m) => (m.id === sender ? m.name : me));
+import FileChat from "./fragment/FileChat";
+import TextChat from "./fragment/TextChat";
 
+export default function InChat({ member, sender, message, imgurl }) {
+  const who = member.reduce((me, m) => (m.id === sender ? m.name : me));
   return (
     <div className="flex">
       <div className="relative size-10 rounded-full overflow-hidden">
@@ -11,7 +13,7 @@ export default function InChat({ member, sender, message }) {
           <h1 className="text-xs font-semibold">{who}</h1>
           <h1 className="text-xs">12:05</h1>
         </div>
-        <h1 className="break-words text-sm px-3 py-2 bg-wrapper rounded-r-lg rounded-bl-lg">{message}</h1>
+        {!message ? <FileChat url={imgurl} /> : <TextChat>{message}</TextChat>}
       </div>
     </div>
   );

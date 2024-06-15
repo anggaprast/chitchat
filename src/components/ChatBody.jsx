@@ -13,7 +13,13 @@ export default function ChatBody({ data }) {
       {/* Looping conversation data */
       /* Pada real case, variable admin, agent, customer, maupun member lainnya akan bernilai sesuai id yang ter-login di masing-masing device member */
       /* Contoh pada case ini login sebagai agent */}
-      {comment.map((chat) => (chat.sender !== agent ? <InChat key={chat.id} member={member} sender={chat.sender} message={chat.message} /> : <MyReply key={chat.id} message={chat.message} />))}
+      {comment.map((chat) =>
+        chat.sender !== agent ? (
+          <InChat key={chat.id} member={member} sender={chat.sender} message={chat.type === "text" ? chat.message : ""} imgurl={chat.type !== "text" ? chat.message.url : ""} />
+        ) : (
+          <MyReply key={chat.id} message={chat.message} />
+        )
+      )}
     </div>
   );
 }

@@ -52,6 +52,21 @@
         "type": "text",
         "message": "Baik, silahkan kirimkan lampiran bukti pembayarannya",
         "sender": "agent@mail.com"
+      },
+      {
+        "id": 885517,
+        "type": "file",
+        "message": {
+          "url": "https://picsum.photos/id/237/200/300",
+          "alt": "File"
+        },
+        "sender": "customer@mail.com"
+      },
+      {
+        "id": 885518,
+        "type": "text",
+        "message": "Oke boss",
+        "sender": "agent@mail.com"
       }
     ]
   }
