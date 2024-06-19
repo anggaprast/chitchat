@@ -1,11 +1,17 @@
 import { useState } from "react";
 
-export default function ConvList({ data, setShowChat }) {
+export default function ConvList({ data, user, setShowChat }) {
   if (!data || data.length === 0) return;
   const [active, setActive] = useState(false);
-  const room = data.room;
+
+  const member = data.room.participant;
   const comment = data.comments;
+
   const latestMessage = comment.reduce((latest, currentComment) => (currentComment.id > latest.id ? currentComment : latest));
+  console.log(latestMessage);
+  const lastSender = member.find((m) => m.id === latestMessage.sender);
+
+  //show conversation panel
   function handleActive() {
     setShowChat(true);
     setActive(true);
@@ -17,15 +23,15 @@ export default function ConvList({ data, setShowChat }) {
       <a href="#" draggable="false" className={`${active ? "active" : "hover:bg-bluebtn hover:bg-opacity-10"}`} onClick={() => handleActive()}>
         <div className="grid grid-cols-6 px-6 md:px-3 lg:px-6 py-3 items-center">
           <div className="relative size-14 md:size-12 lg:size-14 rounded-full overflow-hidden">
-            <img src={room.image_url} alt="Image" className="w-full h-full object-cover drag-none" />
+            <img src={data.room.image_url} alt="Image" className="w-full h-full object-cover drag-none" />
           </div>
           <div className="pl-3 grid gap-1 col-span-5">
             <div className="flex justify-between items-center">
-              <h1 className="text-md md:text-sm lg:text-md font-semibold">{room.name}</h1>
+              <h1 className="text-md md:text-sm lg:text-md font-semibold">{data.room.name}</h1>
               <h1 className="text-xs md:text-[10px] lg:text-xs text-slate-300">12:45</h1>
             </div>
             <div className="flex w-full justify-between items-center">
-              <h1 className="w-72 md:w-52 lg:w-56 xl:w-72 truncate text-sm text-slate-300">{latestMessage.message}</h1>
+              <h1 className="w-72 md:w-52 lg:w-56 xl:w-72 truncate text-sm text-slate-300">{lastSender.id === user ? latestMessage.message : lastSender.name + `: ` + latestMessage.message}</h1>
             </div>
           </div>
         </div>

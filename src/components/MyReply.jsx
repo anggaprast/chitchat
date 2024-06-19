@@ -1,9 +1,10 @@
-export default function MyReply({ message }) {
+import FileChat from "./fragment/FileChat";
+import TextChat from "./fragment/TextChat";
+
+export default function MyReply({ message, imgurl }) {
   return (
-    <div className="flex flex-row-reverse">
-      <div className="max-w-[300px] md:max-w-[500px]">
-        <h1 className="text-sm px-3 py-2 bg-sky-600 rounded-l-xl rounded-br-xl">{message}</h1>
-      </div>
+    <div className="flex justify-end">
+      <div className="max-w-[300px] md:max-w-[500px]">{!message ? <FileChat url={imgurl} /> : <TextChat color={`bg-sky-700`}>{message}</TextChat>}</div>
     </div>
   );
 }

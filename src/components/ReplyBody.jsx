@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ReplyBody({ onReply }) {
+export default function ReplyBody({ onReply, user }) {
   const [type, setType] = useState("text");
   const [message, setMessage] = useState("");
   function handleSend(e) {
@@ -11,10 +11,10 @@ export default function ReplyBody({ onReply }) {
       id: Date.now(),
       type,
       message,
-      sender: "agent@mail.com", //Hardcode untuk contoh, nantinya diisi sesuai id login
+      sender: user,
     };
     onReply(newMessage);
-    console.log(newMessage);
+    setMessage("");
   }
   return (
     <div className="h-[10%] grid grid-cols-12 items-center px-4 md:px-6">
